@@ -1,10 +1,39 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Login from './components/login/Login';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/header/Header";
+import Login from "./components/login/Login";
+import { Route, Routes } from "react-router-dom";
+import publicRouter from "./routes/routes";
+import DefaultLayout from "./layout/defaultLayout/DefaultLayout";
+import Home from "./layout/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <Login/>
+      <Routes>
+        {publicRouter.map((route, idx) => {
+          let Page = Home;
+          let Layout = DefaultLayout;
+
+          if (route.layout === "onlyLayout") {
+            Layout = Login;
+          }
+          if (!route.layout === null) {
+            Page = route.component;
+          }
+          console.log(Page);
+          return (
+            <Route
+              key={idx}
+              path={route.path}
+              element={
+                <Layout>
+                  <Page></Page>
+                </Layout>
+              }
+            />
+          );
+        })}
+      </Routes>
     </div>
   );
 }

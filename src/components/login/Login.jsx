@@ -202,7 +202,7 @@ export default function Login() {
             </div>
             <div className={cx("social")}>
               <p className={cx("question")}>
-                or back to <button>Sign in</button>
+                or back to <button onClick={handleChangePass}>Sign in</button>
               </p>
             </div>
           </div>
