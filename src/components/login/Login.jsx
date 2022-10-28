@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./login.module.scss";
 
 const cx = classNames.bind(styles);
 
 export default function Login() {
+  const navigate = useNavigate();
   const handleTransform = (par1, par2) => {
     const form1 = document.querySelector(`.${cx(`${par1}`)}`);
     const form2 = document.querySelector(`.${cx(`${par2}`)}`);
@@ -37,6 +39,10 @@ export default function Login() {
     handleTransform("newPassword-form", "login-form");
   };
 
+  const handleLogin = (e) => {
+    navigate("/");
+  };
+
   return (
     <>
       <div className={cx("login")}>
@@ -63,7 +69,9 @@ export default function Login() {
                 className={cx("form-input")}
               />
               <div className={cx("action")}>
-                <button className={cx("btn_login")}>Sign in</button>
+                <button className={cx("btn_login")} onClick={handleLogin}>
+                  Sign in
+                </button>
                 <button
                   className={cx("btn_forgot")}
                   onClick={handleForgotPassword}
@@ -202,7 +210,7 @@ export default function Login() {
             </div>
             <div className={cx("social")}>
               <p className={cx("question")}>
-                or back to <button>Sign in</button>
+                or back to <button onClick={handleChangePass}>Sign in</button>
               </p>
             </div>
           </div>
