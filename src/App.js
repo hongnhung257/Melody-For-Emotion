@@ -20,7 +20,7 @@ function App() {
           if (!route.layout === null) {
             Page = route.component;
           }
-          console.log(Page);
+
           return (
             <Route
               key={idx}

@@ -4,6 +4,7 @@ import styles from "./header.module.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faSearch, faXmark } from "@fortawesome/free-solid-svg-icons";
+import Search from "../search/Search";
 
 const cx = classNames.bind(styles);
 export default function Header() {
@@ -22,20 +23,7 @@ export default function Header() {
   return (
     <>
       <header className={cx("header")}>
-        <div className={cx("search")}>
-          <button className={cx("icon-search")}>
-            <FontAwesomeIcon icon={faSearch} />
-          </button>
-          <input
-            onChange={handleChangeInput}
-            type="text"
-            placeholder="search..."
-            className={cx("input-search")}
-          />
-          <button className={cx("icon-close")} onClick={handleCloseInput}>
-            <FontAwesomeIcon icon={faXmark} />
-          </button>
-        </div>
+        <Search></Search>
 
         <button className={cx("timer")}>
           <img

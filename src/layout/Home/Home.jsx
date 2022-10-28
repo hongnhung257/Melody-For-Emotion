@@ -3,10 +3,12 @@ import classNames from "classnames/bind";
 import styles from "./home.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPlus } from "@fortawesome/free-solid-svg-icons";
+import Modal from "../../components/modal/Modal";
 const cx = classNames.bind(styles);
 export default function Home() {
   return (
     <>
+      <Modal></Modal>
       <h1 className={cx("title")}>PlayList</h1>
       <div className={cx("content")}>
         <table className={cx("table")}>

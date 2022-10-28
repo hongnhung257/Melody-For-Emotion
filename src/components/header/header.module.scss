@@ -4,53 +4,6 @@
     display: flex;
     align-items: center ;
 }
-.search {
-    width: 500px;
-    display: flex;
-    border-radius: 20px;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.3);
-    margin-left: 100px;
-    padding:0 0 0 15px;
-}
-.icon-search {
-    display: block;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    svg {
-        color: white;
-        font-size: 20px;
-    }
-}
-.input-search {
-    height: 50px;
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white;
-    &::placeholder {
-        color: white;
-    }
-}
-.icon-close {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: 10px;
-    display: none;
-    svg {
-        color: white;
-    }
-}
-.icon-close.active {
-    display: block;
-}
 
 .timer {
     border: none;

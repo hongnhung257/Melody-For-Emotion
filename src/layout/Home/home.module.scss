@@ -1,5 +1,7 @@
 .title {
-
+font-size: 32px;
+font-weight: bold;
+color: white;
 }
 .content {
     display: flex;
@@ -15,9 +17,24 @@
 }
 .table thead td {
     padding-bottom: 10px;
+    color: white;
+   
 }
 .table tbody td {
     padding-top: 15px;
+    color: white;
+    vertical-align:center;
+ 
+   
+      
+}
+.table tbody tr {
+vertical-align: center;
+   
+    &:nth-child(odd) {
+            background-color: rgb(255, 255, 255, 30%);
+            
+        }
 }
 
 tbody td .icon {
@@ -25,7 +42,7 @@ tbody td .icon {
     margin:0 10px;
 }
 .playing-song {
-    width: 350px;
+    width: 400px;
     height: 100%;
     background: rgba(217, 217, 217, 0.15);
     border-radius: 30px;
