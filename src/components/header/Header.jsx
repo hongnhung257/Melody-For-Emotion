@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./header.module.scss";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClose, faSearch, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Search from "../search/Search";
 
 const cx = classNames.bind(styles);
@@ -24,14 +22,13 @@ export default function Header() {
     <>
       <header className={cx("header")}>
         <Search></Search>
-
-        <button className={cx("timer")}>
+        <Link className={cx("timer")} to="/timer">
           <img
             src={require("./../../assets/images/icons8-clock 1.png")}
             alt=""
             className={cx("lock")}
           />
-        </button>
+        </Link>
         {!isLogin ? (
           <div className={cx("authen")}>
             <Link to="/login" className={cx("btn-login")}>

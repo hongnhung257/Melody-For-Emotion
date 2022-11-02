@@ -3,6 +3,7 @@ import Header from "../../components/header/Header";
 import classNames from "classnames/bind";
 import styles from "./defaultLayout.module.scss";
 import Sidebar from "../sidebar/Sidebar";
+import Playing from "../../components/playing/Playing";
 
 const cx = classNames.bind(styles);
 
@@ -12,7 +13,10 @@ export default function DefaultLayout({ children }) {
       <Sidebar />
       <div className={cx("main")}>
         <Header></Header>
-        <main className={cx("content")}>{children}</main>
+        <main className={cx("content")}>
+          <div className="w-100">{children}</div>
+          <Playing />
+        </main>
       </div>
     </div>
   );

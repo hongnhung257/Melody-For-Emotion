@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
+  const [visible, setVisible] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -23,10 +24,11 @@ export default function Search() {
   const handleHideResult = () => {
     setShowResult(false);
   };
-  const handleChange = (e) => {
-    const searchValue = e.target.value;
+
+  const onChangeInput = (e) => {
+    const value = e.target.value;
     if (!searchValue.startsWith(" ")) {
-      setSearchValue(searchValue);
+      setSearchValue(value);
     }
   };
   const handleClear = () => {
@@ -35,18 +37,25 @@ export default function Search() {
     inputRef.current.focus();
   };
 
+  const handleClick = (e) => {
+    console.log(e.target.innerHTML);
+  };
   return (
     <>
+      {console.log(visible)}
       <Tippy
         interactive
         // visible={showResult && searchResult.length > 0}
-        visible
+        visible={showResult || searchValue.length > 0}
+        // offset={[0, -35]}
+        // visible
+        // zIndex={1}
         render={(attrs) => (
           <div className={cx("search-result")} tabIndex="-1" {...attrs}>
             <div className={cx("search-content")}>
               <ul className={cx("search-list")}>
                 <li className={cx("search-item")}>
-                  <Link className={cx("search-link")}>
+                  <Link className={cx("search-link")} onClick={handleClick}>
                     <FontAwesomeIcon icon={faSearch} />
                     <p className={cx("text")}>Drive My Car</p>
                   </Link>
@@ -85,7 +94,7 @@ export default function Search() {
             className={cx("input-search")}
             value={searchValue}
             spellCheck={false}
-            onChange={handleChange}
+            onChange={onChangeInput}
             onFocus={() => setShowResult(true)}
           />
           {!!searchValue && !loading && (
