@@ -1,40 +1,43 @@
 .header {
-    height: 70px;
-    background: rgba(162, 162, 162, 0.42);
-    display: flex;
-    align-items: center ;
+  position: fixed;
+  height: 70px;
+  background: rgba(162, 162, 162, 0.42);
+  display: flex;
+  align-items: center;
+  right: 0;
+  width: calc(100% - 300px);
 }
 
 .timer {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    margin-left: 150px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-left: 150px;
 }
 
 .userName {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-    color: white;
-    margin-left: 150px;
-    margin-right: 50px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+  margin-left: 150px;
+  margin-right: 50px;
 }
 
 .authen {
-    margin-left: auto;
-    margin-right: 20px;
+  margin-left: auto;
+  margin-right: 20px;
 }
 .btn-login {
-    display: block;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    background-color:#4b305b;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
+  display: block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #4b305b;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
 }

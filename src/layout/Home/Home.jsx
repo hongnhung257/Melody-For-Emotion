@@ -7,8 +7,8 @@ import Modal from "../../components/modal/Modal";
 const cx = classNames.bind(styles);
 export default function Home() {
   return (
-    <>
-      {/* <Modal></Modal> */}
+    <div className={cx("home-container")}>
+      <Modal></Modal>
       <h1 className={cx("title")}>PlayList</h1>
       <div className={cx("content")}>
         <table className={cx("table")}>
@@ -153,6 +153,6 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
