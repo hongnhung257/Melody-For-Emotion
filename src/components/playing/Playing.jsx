@@ -1,6 +1,23 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./playing.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBackspace,
+  faBackwardFast,
+  faBackwardStep,
+  faCircle,
+  faCirclePlay,
+  faClose,
+  faForwardStep,
+  faHandBackFist,
+  faPlay,
+  faPlus,
+  faRefresh,
+  faRepeat,
+  faRetweet,
+  faS,
+} from "@fortawesome/free-solid-svg-icons";
 const cx = classNames.bind(styles);
 export default function Playing() {
   return (
@@ -29,9 +46,37 @@ export default function Playing() {
         </div>
         <div className={cx("player-number")}>
           <span className={cx("player-remaining")}>0:00</span>
+          <td className="d-flex">
+            <button class={cx("repeat", "btn-action")}>
+              <FontAwesomeIcon
+                icon={faRepeat}
+                className={cx("icon")}
+              ></FontAwesomeIcon>
+            </button>
+
+            <button class={cx("back", "btn-action")}>
+              <FontAwesomeIcon
+                icon={faBackwardStep}
+                className={cx("icon")}
+              ></FontAwesomeIcon>
+            </button>
+            <button class={cx("play-song", "btn-action")}>
+              <FontAwesomeIcon
+                icon={faCirclePlay}
+                className={cx("icon")}
+              ></FontAwesomeIcon>
+            </button>
+            <button class={cx("forward", "btn-action")}>
+              <FontAwesomeIcon
+                icon={faForwardStep}
+                className={cx("icon")}
+              ></FontAwesomeIcon>
+            </button>
+          </td>
           <span className={cx("player-duration")}>0:00</span>
         </div>
       </div>
+
       <div className={cx("player-tool")}></div>
     </div>
   );

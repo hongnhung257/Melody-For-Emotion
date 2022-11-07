@@ -15,7 +15,7 @@ function App() {
           let Layout = DefaultLayout;
 
           if (route.layout === "onlyLayout") {
-            Layout = Login;
+            Layout = route.component;
           }
           if (route.layout === null) {
             Page = route.component;
