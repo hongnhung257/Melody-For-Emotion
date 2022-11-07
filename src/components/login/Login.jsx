@@ -123,7 +123,7 @@ export default function Login() {
     window.google.accounts.id.initialize({
       client_id: "451860819558-kd3ojmcb940jfls3n4fnop1peukdg02t.apps.googleusercontent.com", // here's your Google ID
       callback: onGoogleSignIn,
-      auto_select: false,
+      auto_select: false ,
     });
 
     window.google.accounts.id.renderButton(googlebuttonref.current, {
