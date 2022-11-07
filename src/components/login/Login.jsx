@@ -58,7 +58,7 @@ export default function Login() {
   const handleRegister = () => {
     if(uname_regis_Ref.current.value.trim() == ""
     || email_regis_Ref.current.value.trim() == ""
-    || pass_regis_Ref.current.value.trim() == ""
+    || pass_regis_Ref.current.value.trim() == "" 
     || cfpass_regis_Ref.current.value.trim() == ""){
       alert("Registration failed");
       return;
