@@ -14,8 +14,10 @@ export default function DefaultLayout({ children }) {
       <div className={cx("main")}>
         <Header></Header>
         <main className={cx("content")}>
-          <div className="w-100">{children}</div>
-          <Playing />
+          <div className="col-md-9">{children}</div>
+          <div className="col-md-3">
+            <Playing />
+          </div>
         </main>
       </div>
     </div>

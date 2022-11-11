@@ -12,7 +12,7 @@ export default function Modal() {
   return (
     <div className={cx("modal")}>
       <h3 className={cx("heading")}> Melody for Emotion</h3>
-      <p className={cx("title")}>How do you feel today</p>
+      <p className={cx("title")}>How do you feel today?</p>
       <div className={cx("answer")}>
         <button className={cx("btn-happy")}>happy</button>
         <button className={cx("btn-sad")}>Sad</button>

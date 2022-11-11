@@ -1,8 +1,10 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Profile.module.scss";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
+
 export default function Profile() {
   return (
     <div className={cx("profile-container")}>
@@ -26,24 +28,25 @@ export default function Profile() {
               <div class="row my-2">
                 <div class="col-lg-4 col-12 boldd">Email:</div>
 
-                <div class="col-lg-8 col-12 b">hongnhung250701@gmail.com</div>
+                <div class="col-lg-8 col-12 b">hongnhung2507@gmail.com</div>
               </div>
 
               <div class="row">
                 <div class="col-lg-4 col-12 boldd">Birthday:</div>
 
-                <div class="col-lg-8 col-12 b">25-07-2001</div>
+                <div class="col-lg-8 col-12 b">25/07/2001</div>
               </div>
               <div class="row my-2">
                 <div class="col-lg-4 col-12 boldd">Hobbies:</div>
 
-                <div class="col-lg-8 col-12 b">walking, play soccer</div>
+                <div class="col-lg-8 col-12 boldd">walking, reading book</div>
               </div>
             </div>
           </div>
 
           <div className={cx("action")}>
-            <button
+            <Link
+              to="/editProfile"
               className={cx(
                 "ModifyProfile",
                 "profile-card__button",
@@ -52,8 +55,9 @@ export default function Profile() {
               )}
             >
               Modify Profile
-            </button>
-            <button
+            </Link>
+            <Link
+              to="/changePassword"
               className={cx(
                 "ChangePass",
                 "profile-card__button",
@@ -62,7 +66,7 @@ export default function Profile() {
               )}
             >
               Change Password
-            </button>
+            </Link>
           </div>
         </div>
       </div>

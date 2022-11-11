@@ -13,7 +13,7 @@ export default function Home() {
       <div id="content">
         <div class="row">
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_1" class="info">
+            <div id="jp_container_1" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower1">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/ocean.svg"
@@ -29,8 +29,8 @@ export default function Home() {
                   alt="ocean image"
                   class="img2"
                 />
-              </a>
-              <div class="marginal" id="slvolume1">
+              </a> */}
+              {/* <div class={cx("marginal")} id="slvolume1">
                 <input
                   id="my-input1"
                   type="text"
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_7" class="info">
+            <div id="jp_container_7" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower7">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/brook.svg"
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_13" class="info">
+            <div id="jp_container_13" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower13">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/rain.svg"
@@ -103,7 +103,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_2" class="info">
+            <div id="jp_container_2" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower2">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/forest.svg"
@@ -135,7 +135,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_8" class="info">
+            <div id="jp_container_8" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower8">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/fire.svg"
@@ -165,7 +165,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_14" class="info">
+            <div id="jp_container_14" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower14">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/thunder.svg"
@@ -195,7 +195,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_3" class="info">
+            <div id="jp_container_3" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower3">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/wind.svg"
@@ -225,7 +225,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_9" class="info">
+            <div id="jp_container_9" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower9">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/moon.svg"
@@ -255,7 +255,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_20" class="info">
+            <div id="jp_container_20" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower20">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/leafs.svg"
@@ -285,7 +285,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_16" class="info">
+            <div id="jp_container_16" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower16">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/bell.svg"
@@ -315,7 +315,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_15" class="info">
+            <div id="jp_container_15" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower15">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/snow.svg"
@@ -345,7 +345,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_17" class="info">
+            <div id="jp_container_17" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower17">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/cafe.svg"
@@ -375,7 +375,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_12" class="info">
+            <div id="jp_container_12" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower12">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/fan.svg"
@@ -405,7 +405,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_6" class="info">
+            <div id="jp_container_6" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower6">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/train.svg"
@@ -435,7 +435,7 @@ export default function Home() {
           </div>
 
           <div class="col-xs-6 col-sm-4">
-            <div id="jp_container_5" class="info">
+            <div id="jp_container_5" class={cx("info")}>
               <a href="javascript:;" class="jp-play" id="shower5">
                 <img
                   src="https://g2k7z4f8.ssl.hwcdn.net/defonic/images/icons/library.svg"

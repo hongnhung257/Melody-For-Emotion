@@ -8,6 +8,9 @@ import Home from "../layout/Home/Home";
 import Timer from "../layout/timer/Timer";
 import Favorite from "./../layout/favorite/Favorite";
 import Sound from "./../layout/sound/sound";
+import Profile from "../layout/profile/Profile";
+import EditProfile from "./../layout/editProfile/EditProfile";
+
 const routePulic = [
   {
     path: "/",
@@ -58,6 +61,18 @@ const routePulic = [
     path: "/changePassword",
     component: ChangePassword,
     layout: "onlyLayout",
+  },
+
+  {
+    path: "/profile",
+    component: Profile,
+    layout: null,
+  },
+
+  {
+    path: "/editProfile",
+    component: EditProfile,
+    layout: null,
   },
 ];
 export default routePulic;

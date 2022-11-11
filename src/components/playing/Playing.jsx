@@ -1,25 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./playing.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBackspace,
-  faBackwardFast,
   faBackwardStep,
-  faCircle,
   faCirclePlay,
-  faClose,
   faForwardStep,
-  faHandBackFist,
-  faPlay,
-  faPlus,
-  faRefresh,
+  faPauseCircle,
   faRepeat,
-  faRetweet,
-  faS,
 } from "@fortawesome/free-solid-svg-icons";
 const cx = classNames.bind(styles);
+
 export default function Playing() {
+  const [iconChange, setIconChange] = useState(faCirclePlay);
+  const handlePlaying = (e) => {
+    if (iconChange === faCirclePlay) {
+      setIconChange(faPauseCircle);
+    }
+    if (iconChange === faPauseCircle) {
+      setIconChange(faCirclePlay);
+    }
+  };
   return (
     <div className={cx("playing-song")}>
       <div className={cx("player-box")}>
@@ -62,8 +63,9 @@ export default function Playing() {
             </button>
             <button class={cx("play-song", "btn-action")}>
               <FontAwesomeIcon
-                icon={faCirclePlay}
+                icon={iconChange}
                 className={cx("icon")}
+                onClick={handlePlaying}
               ></FontAwesomeIcon>
             </button>
             <button class={cx("forward", "btn-action")}>

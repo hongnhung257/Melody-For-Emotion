@@ -101,7 +101,7 @@ export default function Timer() {
   };
   return (
     <section className={cx("timer")}>
-      <h2 className={"title"}>Timer to stop playing music</h2>
+      <h2 className={cx("title")}>Timer to stop playing music</h2>
       <div className={cx("box")}>
         <div className={cx("time-picker")}>
           <div className={cx("time-input")}>

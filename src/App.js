@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import publicRouter from "./routes/routes";
 import DefaultLayout from "./layout/defaultLayout/DefaultLayout";
 import Home from "./layout/Home/Home";
+import "antd/dist/antd.css";
 
 function App() {
   return (

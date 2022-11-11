@@ -1,9 +1,14 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./EditProfile.module.scss";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 export default function Profile() {
+  const navigate = useNavigate();
+  const handleChangeProfile = (e) => {
+    navigate("/profile");
+  };
   return (
     <div className={cx("profile-container")}>
       <div className={cx("row")}>
@@ -78,10 +83,12 @@ export default function Profile() {
                 "button--blue",
                 "js - message - btn"
               )}
+              onClick={handleChangeProfile}
             >
               Save
             </button>
-            <button
+            <Link
+              to="/profile"
               className={cx(
                 "ChangePass",
                 "profile-card__button",
@@ -90,7 +97,7 @@ export default function Profile() {
               )}
             >
               Cancel
-            </button>
+            </Link>
           </div>
         </div>
       </div>
