@@ -3,10 +3,12 @@ import classNames from "classnames/bind";
 import styles from "./header.module.scss";
 import { Link } from "react-router-dom";
 import Search from "../search/Search";
+import Login from "../login/Login";
 
 const cx = classNames.bind(styles);
 export default function Header() {
-  const [isLogin, setIsLogin] = useState();
+  const [isLogin, setIsLogin] = useState(true);
+  
   const handleChangeInput = (e) => {
     const iconClose = document.querySelector(`.${cx("icon-close")}`);
     iconClose.classList.add(`${cx("active")}`);
@@ -36,7 +38,7 @@ export default function Header() {
             </Link>
           </div>
         ) : (
-          <div className={cx("user")}>username</div>
+          <div className={cx("user")}>values.username</div>
         )}
       </header>
     </>
