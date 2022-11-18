@@ -38,7 +38,7 @@ export default function Header() {
             </Link>
           </div>
         ) : (
-          <div className={cx("user")}>values.username</div>
+          <div className={cx("user")}>{Login.useState}</div>
         )}
       </header>
     </>
